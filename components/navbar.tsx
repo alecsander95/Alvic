@@ -58,7 +58,13 @@ export function Navbar() {
   }, [])
 
   return (
-    <header className="fixed left-1/2 top-[20px] flex w-[95%] -translate-x-1/2 items-center justify-between px-2.5 py-[15px] rounded-[40px] md:w-[85%] md:px-6 md:py-[15px] z-50 border border-[rgba(117,115,114,0.15)] bg-[rgba(255,255,255,0.25)] shadow-none [backdrop-filter:blur(10px)] transition-colors duration-300">
+    <header
+      className={`fixed z-50 shadow-none transition-colors duration-300 flex flex-col md:flex-row items-stretch md:items-center justify-start md:justify-between ${
+        mobileOpen
+          ? "inset-0 w-full h-screen rounded-none px-6 py-6 border border-secondary bg-primary [backdrop-filter:none]"
+          : "left-1/2 top-[20px] w-[95%] md:w-[85%] -translate-x-1/2 rounded-[40px] px-2.5 py-[15px] md:px-6 md:py-[15px] border border-[rgba(117,115,114,0.15)] bg-[rgba(255,255,255,0.25)] [backdrop-filter:blur(10px)]"
+      }`}
+    >
       <div className="mx-auto w-full flex max-w-[1280px] items-center justify-between px-6 py-0">
         <a href="#inicio" className="flex items-center gap-3">
           <Image
@@ -102,7 +108,11 @@ export function Navbar() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className={`md:hidden ${
-            isScrolled ? "text-[#0753A0]" : "text-primary-foreground"
+            mobileOpen
+              ? "text-white"
+              : isScrolled
+                ? "text-[#0753A0]"
+                : "text-primary-foreground"
           }`}
           aria-label={mobileOpen ? "Cerrar menu" : "Abrir menu"}
         >
@@ -112,26 +122,36 @@ export function Navbar() {
 
       {/* Mobile Nav */}
       {mobileOpen && (
-        <nav className="border-t border-secondary bg-primary px-6 pb-6 pt-4 md:hidden">
+        <nav className="md:hidden w-full flex flex-col px-6 pb-8 pt-0 mt-[60px]">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-base font-medium text-primary-foreground/80 transition-colors hover:text-accent"
+                className="text-3xl font-semibold text-white tracking-tight transition-colors hover:text-accent"
               >
                 {link.label}
               </a>
             ))}
-            <a
-              href="#cta-final"
-              onClick={() => setMobileOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full border border-transparent bg-white px-8 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-transparent hover:text-accent hover:border-white"
-            >
-              Solicitar Cotización
-              <ArrowRight className="h-4 w-4" />
-            </a>
+          </div>
+          <a
+            href="#cta-final"
+            onClick={() => setMobileOpen(false)}
+            className="mt-[100px] inline-flex items-center justify-center gap-2 rounded-full border border-transparent bg-white px-8 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-transparent hover:text-accent hover:border-white"
+          >
+            Solicitar Cotización
+            <ArrowRight className="h-4 w-4" />
+          </a>
+          <div className="mt-8 border-t border-primary-foreground/10 pt-4">
+            <div className="flex flex-col items-start gap-1">
+              <p className="text-xs text-primary-foreground/40">
+                {"© 2026 Alvic. Todos los derechos reservados."}
+              </p>
+              <p className="text-xs text-primary-foreground/40">
+                Seguridad y conectividad de confianza
+              </p>
+            </div>
           </div>
         </nav>
       )}
