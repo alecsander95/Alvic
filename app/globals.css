@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* RedMar Brand Colors */
+    --background: 207 18% 97%;
+    --foreground: 200 58% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 200 58% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 58% 14%;
+    --primary: 212 73% 11%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 203 55% 27%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 207 18% 97%;
+    --muted-foreground: 203 30% 40%;
+    --accent: 210 91% 40%;
+    --accent-foreground: 200 58% 14%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 16% 88%;
+    --input: 210 16% 88%;
+    --ring: 184 51% 53%;
+    --chart-1: 200 58% 14%;
+    --chart-2: 203 55% 27%;
+    --chart-3: 184 51% 53%;
+    --chart-4: 207 18% 97%;
+    --chart-5: 210 16% 88%;
+    --radius: 1rem;
+    --sidebar-background: 200 58% 14%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 184 51% 53%;
+    --sidebar-primary-foreground: 200 58% 14%;
+    --sidebar-accent: 203 55% 27%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 203 55% 27%;
+    --sidebar-ring: 184 51% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
