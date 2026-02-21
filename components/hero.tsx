@@ -4,17 +4,23 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-[90vh] items-center overflow-hidden bg-primary pt-20"
+      className="relative flex min-h-[calc(90vh+50px)] md:min-h-[90vh] items-center overflow-hidden bg-primary pt-20"
     >
       {/* Background image with overlay */}
+      {/* Mobile background */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center md:hidden"
+        style={{ backgroundImage: "url('/images/hero-mobile.jpg')" }}
+      />
+      {/* Desktop / tablet background */}
+      <div
+        className="absolute inset-0 hidden bg-cover bg-center md:block"
         style={{ backgroundImage: "url('/images/hero-electric.jpg')" }}
       />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-12 px-6 py-24 lg:flex-row lg:items-center lg:gap-16">
+      <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-6 pt-16 pb-[214px] lg:flex-row lg:items-center lg:gap-16">
         {/* Left Content */}
-        <div className="flex max-w-2xl flex-col gap-8 lg:flex-1">
+        <div className="flex max-w-2xl flex-col gap-6 lg:flex-1">
           <div className="flex items-center gap-2 rounded-full border border-white bg-transparent px-4 py-2 w-fit">
             <Shield className="h-4 w-4 text-white" />
             <span className="text-sm font-medium text-white">
@@ -28,9 +34,10 @@ export function Hero() {
             <span className="text-white">conectividad</span>
           </h1>
 
-          <p className="max-w-lg text-lg leading-relaxed text-white">
-            Ingenieria, instalacion y mantenimiento en sistemas de seguridad,
-            deteccion y redes estructuradas.
+          <p className="max-w-lg text-base leading-relaxed text-white">
+            Alvic es una empresa especializada en brindar servicios integrales
+            en ingeniería, soporte, instalación y mantenimiento en sistemas de
+            seguridad y sistemas contra incendio.
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row">

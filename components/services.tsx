@@ -10,7 +10,7 @@ const services = [
     title: "Detección de Humo y Gas",
     description:
       "Sistemas diseñados para detectar, alertar y evacuar. Protección integral contra incendios y fugas de gas con tecnología de punta.",
-    features: ["Detección de humo", "Detección de gas", "Alarmas de incendio", "Sistemas de evacuación"],
+    features: ["Detección de humo", "Detección de gas", "Alarmas de incendio"],
     imageSrc: "/images/servicios/deteccion-humo-gas.jpg",
     imageAlt: "Sistema de detección de humo y gas instalado por Alvic",
   },
@@ -19,7 +19,7 @@ const services = [
     title: "Alerta Sísmica",
     description:
       "Sistemas de alerta temprana con integración a la red CIRES. Anticipación y protección ante eventos sísmicos.",
-    features: ["Alerta temprana", "Integración CIRES", "Notificación instantánea", "Protocolos de evacuación"],
+    features: ["Alerta temprana", "Integración CIRES", "Notificación instantánea"],
     imageSrc: "/images/servicios/alerta-sismica.jpg",
     imageAlt: "Panel de alerta sísmica operado por un especialista de Alvic",
   },
@@ -31,15 +31,6 @@ const services = [
     features: ["Cámaras HD/4K", "Monitoreo remoto", "Grabación continua", "Análisis inteligente"],
     imageSrc: "/images/servicios/soluciones-cctv.jpg",
     imageAlt: "Monitores de CCTV mostrando diferentes zonas vigiladas por Alvic",
-  },
-  {
-    icon: Network,
-    title: "Conectividad Estructurada",
-    description:
-      "Implementación de redes LAN mediante fibra óptica o cable UTP/STP. Infraestructura de red robusta y escalable.",
-    features: ["Fibra óptica", "Cableado UTP/STP", "Redes LAN", "Infraestructura escalable"],
-    imageSrc: "/images/servicios/conectividad-estructurada.jpg",
-    imageAlt: "Infraestructura de cableado estructurado instalada por Alvic",
   },
 ]
 
@@ -65,7 +56,7 @@ export function Services() {
         </div>
 
         <div className="rounded-3xl bg-white pt-10 px-10 pb-20 shadow-xl">
-          <div className="flex gap-3 overflow-x-auto border-b border-border pb-4">
+          <div className="flex gap-3 overflow-x-auto border-b border-border pb-4 justify-center">
             {services.map((service, index) => {
               const isActive = index === activeIndex
 

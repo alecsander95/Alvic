@@ -21,7 +21,7 @@ export function Stats() {
             </div>
           </div>
 
-          <div className="grid gap-8 text-[#081C33] md:grid-cols-2">
+          <div className="grid grid-cols-2 gap-8 text-[#081C33]">
             <div className="flex flex-col gap-1">
               <span className="text-3xl font-bold text-accent md:text-4xl">
                 15+

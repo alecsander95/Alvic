@@ -62,7 +62,7 @@ export function Navbar() {
       className={`fixed z-50 shadow-none transition-colors duration-300 flex flex-col md:flex-row items-stretch md:items-center justify-start md:justify-between ${
         mobileOpen
           ? "inset-0 w-full h-screen rounded-none px-6 py-6 border border-secondary bg-primary [backdrop-filter:none]"
-          : "left-1/2 top-[20px] w-[95%] md:w-[85%] -translate-x-1/2 rounded-[40px] px-2.5 py-[15px] md:px-6 md:py-[15px] border border-[rgba(117,115,114,0.15)] bg-[rgba(255,255,255,0.25)] [backdrop-filter:blur(10px)]"
+          : "left-1/2 top-[20px] w-[90%] xl:w-[85%] -translate-x-1/2 rounded-[40px] px-2.5 py-[15px] md:px-6 md:py-[15px] border border-[rgba(117,115,114,0.15)] bg-[rgba(255,255,255,0.25)] [backdrop-filter:blur(10px)]"
       }`}
     >
       <div className="mx-auto w-full flex max-w-[1280px] items-center justify-between px-6 py-0">
@@ -77,7 +77,7 @@ export function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -107,7 +107,7 @@ export function Navbar() {
         {/* Mobile Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={`md:hidden ${
+          className={`lg:hidden ${
             mobileOpen
               ? "text-white"
               : isScrolled
@@ -122,7 +122,7 @@ export function Navbar() {
 
       {/* Mobile Nav */}
       {mobileOpen && (
-        <nav className="md:hidden w-full flex flex-col px-6 pb-8 pt-0 mt-[60px]">
+        <nav className="lg:hidden w-full flex flex-col px-6 pb-8 pt-0 mt-[60px]">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
