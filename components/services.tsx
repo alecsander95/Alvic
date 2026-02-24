@@ -2,33 +2,60 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { Flame, AlertTriangle, Camera, Network, ArrowRight } from "lucide-react"
+import { Flame, AlertTriangle, Camera, ArrowRight, HelpCircle } from "lucide-react"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 const services = [
   {
+    id: "item-1",
     icon: Flame,
-    title: "Detección de Humo y Gas",
+    title: "Sistemas Contra Incendio",
+    microcopy: "Detecta y alerta riesgos antes de que escalen.",
     description:
-      "Sistemas diseñados para detectar, alertar y evacuar. Protección integral contra incendios y fugas de gas con tecnología de punta.",
-    features: ["Detección de humo", "Detección de gas", "Alarmas de incendio"],
+      "Sistemas diseñados para detectar, alertar, controlar y extinguir incendios protegiendo vidas humanas y bienes materiales.",
+    features: [
+      "Detectores certificados",
+      "Alertas inmediatas",
+      "Integración con sistemas existentes",
+      "Mantenimiento preventivo",
+    ],
     imageSrc: "/images/servicios/deteccion-humo-gas.jpg",
     imageAlt: "Sistema de detección de humo y gas instalado por Alvic",
   },
   {
+    id: "item-2",
     icon: AlertTriangle,
     title: "Alerta Sísmica",
+    microcopy: "Sistemas conectados a red CIRES con notificación inmediata.",
     description:
-      "Sistemas de alerta temprana con integración a la red CIRES. Anticipación y protección ante eventos sísmicos.",
-    features: ["Alerta temprana", "Integración CIRES", "Notificación instantánea"],
+      "Sistemas de alerta temprana con integración SASMEX. Anticipación y protección ante eventos sísmicos.",
+    features: [
+      "Integración SASMEX",
+      "Alertas tempranas",
+      "Protocolos de evacuación",
+      "Instalación certificada",
+    ],
     imageSrc: "/images/servicios/alerta-sismica.jpg",
     imageAlt: "Panel de alerta sísmica operado por un especialista de Alvic",
   },
   {
+    id: "item-3",
     icon: Camera,
-    title: "Soluciones en CCTV",
+    title: "CCTV y Videovigilancia",
+    microcopy: "Monitoreo inteligente HD / 4K con acceso remoto.",
     description:
       "Sistemas de videovigilancia y monitoreo personalizados. Circuitos cerrados de televisión de alta definición.",
-    features: ["Cámaras HD/4K", "Monitoreo remoto", "Grabación continua", "Análisis inteligente"],
+    features: [
+      "Cámaras HD y 4K",
+      "Monitoreo remoto",
+      "Grabación continua",
+      "Análisis inteligente",
+    ],
     imageSrc: "/images/servicios/soluciones-cctv.jpg",
     imageAlt: "Monitores de CCTV mostrando diferentes zonas vigiladas por Alvic",
   },
@@ -39,24 +66,71 @@ export function Services() {
   const activeService = services[activeIndex]
 
   return (
-    <section id="servicios" className="bg-muted py-24">
-      <div className="mx-auto max-w-[1280px] px-6">
-        <div className="mb-14 text-center">
+    <section id="servicios" className="bg-muted pt-16 pb-0 md:pt-24 md:pb-0">
+      <div className="mx-auto max-w-[1280px] px-4 md:px-6">
+        {/* Header */}
+        <div className="mb-10 flex flex-col items-center text-center md:mb-14">
           <span className="inline-flex w-fit items-center gap-2 rounded-full border border-accent/30 bg-primary/5 px-4 py-2 text-sm font-medium text-accent">
-            Nuestros servicios
+            Nuestros Servicios
           </span>
-          <h2 className="mt-3 text-balance text-3xl font-bold text-primary md:text-4xl">
-            Soluciones tecnológicas a tu medida
+          <h2 className="mt-4 text-balance text-3xl font-bold text-primary md:text-4xl">
+            Soluciones integrales en seguridad y tecnología para empresas.
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Ofrecemos servicios integrales en ingeniería, instalación y
-            mantenimiento para garantizar la seguridad y conectividad de tu
-            infraestructura.
-          </p>
         </div>
 
-        <div className="rounded-3xl bg-white pt-10 px-10 pb-20 shadow-xl">
-          <div className="flex gap-3 overflow-x-auto border-b border-border pb-4 justify-center">
+        {/* Mobile/Tablet Accordion View */}
+        <div className="block lg:hidden">
+          <Accordion type="single" collapsible defaultValue="item-1" className="flex flex-col gap-4">
+            {services.map((service) => (
+              <AccordionItem
+                key={service.id}
+                value={service.id}
+                className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition-all data-[state=open]:shadow-md"
+              >
+                <AccordionTrigger className="px-5 py-4 hover:no-underline">
+                  <div className="flex w-full items-start gap-4 text-left">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                      <service.icon className="h-5 w-5" />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <h3 className="text-base font-bold text-primary">
+                        {service.title}
+                      </h3>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        {service.microcopy}
+                      </p>
+                    </div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-5 pb-6 pt-0">
+                  <div className="ml-[56px] flex flex-col gap-4">
+                    <ul className="grid gap-2">
+                      {service.features.map((feature) => (
+                        <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <div className="h-1.5 w-1.5 rounded-full bg-accent" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="flex flex-wrap gap-3 pt-2">
+                      <a
+                        href="#cta-final"
+                        className="inline-flex h-10 items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-white transition-transform active:scale-95"
+                      >
+                        Solicitar información
+                      </a>
+
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+
+        {/* Desktop Tabs/Grid View */}
+        <div className="hidden lg:block rounded-3xl bg-white pt-10 px-10 pb-20 shadow-xl">
+          <div className="flex gap-3 border-b border-border pb-4 justify-center">
             {services.map((service, index) => {
               const isActive = index === activeIndex
 
@@ -65,7 +139,7 @@ export function Services() {
                   key={service.title}
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className={`flex min-w-[190px] flex-col items-start gap-1 rounded-2xl px-4 py-3 text-left transition-all ${
+                  className={`flex min-w-[220px] flex-col items-start gap-1 rounded-2xl px-5 py-4 text-left transition-all ${
                     isActive
                       ? "bg-primary text-primary-foreground shadow-md"
                       : "bg-card text-muted-foreground hover:bg-muted"
@@ -88,9 +162,9 @@ export function Services() {
             })}
           </div>
 
-          <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:items-center">
+          <div className="mt-8 grid gap-10 grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] items-center">
             <div className="flex flex-col gap-5">
-              <h3 className="text-2xl font-bold text-primary md:text-3xl">
+              <h3 className="text-3xl font-bold text-primary">
                 {activeService.title}
               </h3>
               <p className="text-base leading-relaxed text-muted-foreground">
@@ -119,7 +193,7 @@ export function Services() {
             </div>
 
             <div className="relative flex h-full items-center justify-center">
-              <div className="relative h-[90%] min-h-[260px] w-full overflow-hidden rounded-2xl border border-border bg-card shadow-lg">
+              <div className="relative h-[400px] w-full overflow-hidden rounded-2xl border border-border bg-card shadow-lg">
                 <Image
                   src={activeService.imageSrc}
                   alt={activeService.imageAlt}
@@ -129,6 +203,36 @@ export function Services() {
                 />
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Featured Card (Mobile/Desktop) */}
+        <div className="mt-8 md:mt-12">
+          <div className="relative overflow-hidden rounded-2xl bg-primary px-6 py-8 text-center shadow-lg md:px-10 md:py-10">
+            <div className="relative z-10 flex flex-col items-center gap-4 md:flex-row md:justify-between md:gap-8">
+              <div className="flex flex-col items-center gap-3 text-center md:flex-row md:text-left">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/20 text-accent">
+                  <HelpCircle className="h-6 w-6" />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-xl font-bold text-white">
+                    ¿No sabes cuál necesitas?
+                  </h3>
+                  <p className="text-primary-foreground/80">
+                    Te asesoramos sin costo para encontrar la mejor solución.
+                  </p>
+                </div>
+              </div>
+              <a
+                href="#cta-final"
+                className="inline-flex w-full items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-bold text-primary transition-transform hover:scale-105 md:w-auto"
+              >
+                Solicitar asesoría
+              </a>
+            </div>
+            {/* Background pattern */}
+            <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-accent/10 blur-2xl" />
+            <div className="absolute -left-10 -bottom-10 h-32 w-32 rounded-full bg-accent/10 blur-2xl" />
           </div>
         </div>
       </div>

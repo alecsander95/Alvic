@@ -12,16 +12,16 @@ export function About() {
   return (
     <section id="nosotros" className="bg-background py-24">
       <div className="mx-auto max-w-[1280px] px-6">
-        <div className="flex flex-col items-center gap-16 lg:flex-row">
+        <div className="flex flex-col-reverse items-center gap-16 lg:flex-row">
           {/* Image */}
           <div className="relative lg:flex-1">
-            <div className="overflow-hidden rounded-2xl">
+            <div className="overflow-hidden rounded-[10px]">
               <Image
                 src="/images/about-team.jpg"
                 alt="Técnico de Alvic instalando un sensor de humo en un entorno con humo"
                 width={768}
                 height={964}
-                className="h-auto w-full object-cover"
+                className="h-full w-full object-cover md:h-auto md:w-full"
               />
             </div>
             {/* Floating card */}
@@ -44,8 +44,7 @@ export function About() {
             <p className="text-base leading-relaxed text-muted-foreground">
               Alvic es una empresa especializada en brindar servicios integrales
               en ingeniería, soporte, instalación y mantenimiento en sistemas de
-              seguridad, cableado estructurado, detección de humo y alarma de
-              incendio.
+              seguridad y sistemas contra incendio.
             </p>
             <p className="text-base leading-relaxed text-muted-foreground">
               Hoy en día nuestra experiencia, compromiso y profesionalismo nos

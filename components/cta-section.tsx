@@ -127,9 +127,9 @@ export function CtaSection() {
                       ¿Trabajan con marcas específicas de equipos?
                     </AccordionTrigger>
                     <AccordionContent className="px-5 pb-5 pt-2 text-sm leading-relaxed text-muted-foreground">
-                      Seleccionamos marcas reconocidas y certificadas en detección,
-                      CCTV y redes, siempre priorizando la compatibilidad,
-                      disponibilidad de refacciones y soporte a largo plazo.
+                      Seleccionamos marcas reconocidas y certificadas, siempre
+                      priorizando la compatibilidad, disponibilidad de refacciones
+                      y soporte a largo plazo.
                     </AccordionContent>
                   </div>
                 </AccordionItem>
@@ -180,7 +180,7 @@ export function CtaSection() {
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://wa.me/525500000000?text=Hola%20me%20gustaria%20recibir%20informacion%20sobre%20los%20servicios%20de%20seguridad%20y%20conectividad."
+              href="https://wa.me/525516094546?text=Hola%20me%20gustaria%20recibir%20informacion%20sobre%20los%20servicios%20de%20seguridad%20y%20conectividad."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-8 py-3.5 text-base font-semibold text-white transition-all hover:scale-[1.02] hover:bg-[#22c35e]"

@@ -3,7 +3,7 @@ import { Mail } from "lucide-react"
 
 const footerLinks = {
   Servicios: [
-    "Detección de Humo y Gas",
+    "Sistemas Contra Incendio",
     "Alerta Sísmica",
     "Soluciones en CCTV",
     "Conectividad Estructurada",

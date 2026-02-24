@@ -41,7 +41,7 @@ export function Expertise() {
                 alt="Técnico de Alvic instalando un sistema de alerta sísmica en un entorno industrial"
                 width={640}
                 height={800}
-                className="h-auto w-full object-cover"
+                className="h-[250px] w-full object-cover md:h-auto"
               />
             </div>
           </div>

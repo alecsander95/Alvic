@@ -29,15 +29,12 @@ export function Hero() {
           </div>
 
           <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
-            Soluciones integrales en{" "}
-            <span className="text-white">seguridad</span> y{" "}
-            <span className="text-white">conectividad</span>
+            Ingeniería en soluciones integrales de seguridad
           </h1>
 
           <p className="max-w-lg text-base leading-relaxed text-white">
-            Alvic es una empresa especializada en brindar servicios integrales
-            en ingeniería, soporte, instalación y mantenimiento en sistemas de
-            seguridad y sistemas contra incendio.
+            Instalación y mantenimiento en sistemas de seguridad y contra
+            incendio.
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row">

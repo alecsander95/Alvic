@@ -40,7 +40,7 @@ export default function Page() {
       <Footer />
 
       <a
-        href="https://wa.me/525500000000?text=Hola%20me%20gustaria%20recibir%20informacion%20sobre%20los%20servicios%20de%20seguridad%20y%20conectividad."
+        href="https://wa.me/525516094546?text=Hola%20me%20gustaria%20recibir%20informacion%20sobre%20los%20servicios%20de%20seguridad%20y%20conectividad."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contactar por WhatsApp"
