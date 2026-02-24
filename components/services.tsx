@@ -15,14 +15,13 @@ const services = [
     id: "item-1",
     icon: Flame,
     title: "Sistemas Contra Incendio",
-    microcopy: "Detecta y alerta riesgos antes de que escalen.",
+    microcopy: "Sistemas diseñados para detectar, alertar, controlar y extinguir incendios protegiendo vidas humanas y bienes materiales.",
     description:
       "Sistemas diseñados para detectar, alertar, controlar y extinguir incendios protegiendo vidas humanas y bienes materiales.",
     features: [
-      "Detectores certificados",
-      "Alertas inmediatas",
-      "Integración con sistemas existentes",
-      "Mantenimiento preventivo",
+      "Sistemas de detección y alarma",
+      "Sistemas de supresión automática",
+      "Sistemas de red hidráulica contra incendio",
     ],
     imageSrc: "/images/servicios/deteccion-humo-gas.jpg",
     imageAlt: "Sistema de detección de humo y gas instalado por Alvic",
@@ -31,13 +30,12 @@ const services = [
     id: "item-2",
     icon: AlertTriangle,
     title: "Alerta Sísmica",
-    microcopy: "Sistemas conectados a red CIRES con notificación inmediata.",
+    microcopy: "Sistemas de alerta temprana con integración SASMEX. Anticipación y protección ante eventos sísmicos.",
     description:
       "Sistemas de alerta temprana con integración SASMEX. Anticipación y protección ante eventos sísmicos.",
     features: [
       "Integración SASMEX",
       "Alertas tempranas",
-      "Protocolos de evacuación",
       "Instalación certificada",
     ],
     imageSrc: "/images/servicios/alerta-sismica.jpg",
@@ -47,7 +45,7 @@ const services = [
     id: "item-3",
     icon: Camera,
     title: "CCTV y Videovigilancia",
-    microcopy: "Monitoreo inteligente HD / 4K con acceso remoto.",
+    microcopy: "Sistemas de videovigilancia y monitoreo personalizados. Circuitos cerrados de televisión de alta definición.",
     description:
       "Sistemas de videovigilancia y monitoreo personalizados. Circuitos cerrados de televisión de alta definición.",
     features: [
