@@ -6,9 +6,24 @@ import './globals.css'
 const lexend = Lexend({ subsets: ['latin'], variable: '--font-lexend' })
 
 export const metadata: Metadata = {
-  title: 'Alvic Soluciones',
+  title: 'Sistemas de Seguridad y Contra Incendio – Alvic',
   description:
-    'Ingenieria, instalacion y mantenimiento en sistemas de seguridad, deteccion y redes estructuradas. Soluciones integrales para sectores industrial, residencial, comercial y gubernamental.',
+    'Instalación y mantenimiento de sistemas contra incendio, CCTV y alerta sísmica para empresas. +15 años de experiencia. Solicita tu cotización sin costo.',
+  openGraph: {
+    title: 'Alvic | Ingeniería en Seguridad y Conectividad',
+    description:
+      'Instalamos y mantenemos sistemas contra incendio, CCTV y alerta sísmica para empresas en México. +15 años protegiendo tu negocio.',
+    type: 'website',
+    url: 'https://www.alvicss.com/',
+    images: [
+      {
+        url: 'https://www.alvicss.com/images/hero-electric.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Alvic Soluciones - Ingeniería en Seguridad',
+      },
+    ],
+  },
   icons: {
     icon: '/images/favicon.png',
     shortcut: '/images/favicon.png',

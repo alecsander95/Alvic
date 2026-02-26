@@ -39,6 +39,34 @@ export default function Page() {
       <CtaSection />
       <Footer />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Alvic puede reemplazar mi sistema actual de detección o CCTV?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sí, evaluamos tu infraestructura actual y proponemos una migración gradual o completa, asegurando compatibilidad con tus equipos y normativas vigentes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿En qué zonas geográficas trabajan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Atendemos proyectos en México en sectores industrial, residencial, comercial y gubernamental."
+                }
+              }
+            ]
+          }),
+        }}
+      />
+
       <a
         href="https://wa.me/525516094546?text=Hola%20me%20gustaria%20recibir%20informacion%20sobre%20los%20servicios%20de%20seguridad%20y%20conectividad."
         target="_blank"

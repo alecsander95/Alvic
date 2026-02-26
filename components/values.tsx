@@ -24,7 +24,7 @@ const reviews = [
       "Hoy contamos con un sistema confiable de alarma y monitoreo que da tranquilidad a nuestros residentes.",
     name: "Luis G.",
     role: "Administrador de Condominio",
-    imageSrc: "/images/testimonios/testimonio-3-icon.jpg",
+    imageSrc: "/images/testimonios/reckitt.png",
   },
 ]
 

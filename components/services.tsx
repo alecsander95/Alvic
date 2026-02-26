@@ -30,11 +30,11 @@ const services = [
     id: "item-2",
     icon: AlertTriangle,
     title: "Alerta Sísmica",
-    microcopy: "Sistemas de alerta temprana con integración SASMEX. Anticipación y protección ante eventos sísmicos.",
+    microcopy: "Sistemas de alerta temprana con integración CIRES. Anticipación y protección ante eventos sísmicos.",
     description:
-      "Sistemas de alerta temprana con integración SASMEX. Anticipación y protección ante eventos sísmicos.",
+      "Sistemas de alerta temprana con integración CIRES. Anticipación y protección ante eventos sísmicos.",
     features: [
-      "Integración SASMEX",
+      "Integración CIRES",
       "Alertas tempranas",
       "Instalación certificada",
     ],
